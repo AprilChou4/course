@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>promise</title>
+  </head>
+  <body>
+    <div>new Promise(function(resolve,reject){ })</div>
+    <div>Promise 是异步编程的一种解决方案</div>
+    <script>
+      var a = '女神1',
+        promise = '我要山盟海誓'
+
+      var pro = new Promise(function (resolve, reject) {
+        if (a === '女神') {
+          resolve(promise)
+        } else {
+          reject('你不是我的菜')
+        }
+      })
+
+      pro
+        .then(function (data) {
+          console.log(data, '-----resolve------')
+        })
+        .catch(function (data) {
+          console.log(data, '----reject-------')
+        })
+    </script>
+  </body>
+</html>
