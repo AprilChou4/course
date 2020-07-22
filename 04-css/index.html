@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>flex 实现上中下布局</title>
+  </head>
+  <body>
+    <style>
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        height: 100vh;
+      }
+      .m-container {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        background-color: #cfc;
+      }
+      header,
+      footer {
+        height: 100px;
+        background-color: #ccc;
+      }
+      main {
+        flex: 1;
+      }
+    </style>
+    <div class="m-container">
+      <header>1</header>
+      <main><div>111</div></main>
+      <footer>1</footer>
+    </div>
+  </body>
+</html>
