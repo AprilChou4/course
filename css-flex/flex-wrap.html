@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>flex-direction</title>
+  </head>
+
+  <body>
+    <style>
+      body,
+      html,
+      ul {
+        margin: 0;
+        padding: 0;
+      }
+
+      ul,
+      li {
+        list-style: none;
+      }
+
+      html,
+      body,
+      .m-container {
+        height: 100%;
+      }
+
+      .m-container {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+      }
+      li {
+        width: 300px;
+        flex: 1;
+      }
+      .m-li1 {
+        background-color: antiquewhite;
+      }
+
+      .m-li2 {
+        background-color: #cfc;
+      }
+
+      .m-li3 {
+        background-color: aquamarine;
+      }
+    </style>
+    <ul class="m-container">
+      <li class="m-li1">item1item1item1item1item1item1item1</li>
+      <li class="m-li2">item2item2item2item2item2item2item2</li>
+      <li class="m-li3">item3</li>
+      <li class="m-li1">item4</li>
+      <li class="m-li2">item5</li>
+      <li class="m-li3">item6</li>
+    </ul>
+  </body>
+</html>

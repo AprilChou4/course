@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>flex-direction</title>
+  </head>
+
+  <body>
+    <style>
+      body,
+      html,
+      ul {
+        margin: 0;
+        padding: 0;
+      }
+
+      ul,
+      li {
+        list-style: none;
+      }
+
+      html,
+      body,
+      .m-container {
+        height: 100%;
+      }
+
+      .m-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: baseline;
+      }
+
+      li {
+        width: 100px;
+      }
+      .m-li1 {
+        background-color: antiquewhite;
+        font-size: 16px;
+      }
+
+      .m-li2 {
+        background-color: #cfc;
+        font-size: 10px;
+      }
+
+      .m-li3 {
+        background-color: antiquewhite;
+        font-size: 20px;
+      }
+    </style>
+    <ul class="m-container">
+      <li class="m-li1">
+        item1十大歌手的归属感顺丰到付沙发斯蒂芬是发送到发送到是的发生的
+      </li>
+      <li class="m-li2">aaaa</li>
+      <li class="m-li3">item3</li>
+    </ul>
+  </body>
+</html>
