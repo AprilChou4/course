@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BFC 可以包含浮动的元素（清除浮动）</title>
+  </head>
+  <body>
+    <style>
+      .m-container {
+        border: 1px solid #000;
+        overflow: hidden; /* 增加 */
+      }
+      .m-item {
+        width: 100px;
+        height: 100px;
+        background-color: #eee;
+        float: left;
+      }
+    </style>
+    <div>
+      由于容器内元素浮动，脱离了文档流，所以容器只剩下 2px
+      的边距高度。如果使触发容器的 BFC，那么容器将会包裹着浮动元素。
+    </div>
+    <div class="m-container">
+      <div class="m-item"></div>
+    </div>
+  </body>
+</html>

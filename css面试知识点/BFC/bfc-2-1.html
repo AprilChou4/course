@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BFC 可以包含浮动的元素（清除浮动）</title>
+  </head>
+  <body>
+    <style>
+      .m-container {
+        border: 1px solid #000;
+      }
+      .m-item {
+        width: 100px;
+        height: 100px;
+        background-color: #eee;
+        float: left;
+      }
+    </style>
+    <div class="m-container">
+      <div class="m-item"></div>
+    </div>
+  </body>
+</html>

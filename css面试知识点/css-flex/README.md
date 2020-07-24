@@ -75,10 +75,15 @@ row-reverse：主轴为水平方向，起点在右端。
 ```
 
 （1）nowrap（默认）：不换行。
+
 ![file-list](https://upload-images.jianshu.io/upload_images/13944531-ce8c6f815b5bfc0a.png?imageMogr2/auto-orient/strip|imageView2/2/w/700/format/webp)
+
 （2）wrap：换行，第一行在上方。
+
 ![file-list](https://upload-images.jianshu.io/upload_images/13944531-0701b857c3588b37.jpg?imageMogr2/auto-orient/strip|imageView2/2/w/700/format/webp)
+
 （3）wrap-reverse：换行，第一行在下方。
+
 ![file-list](https://upload-images.jianshu.io/upload_images/13944531-0ae21f2bd8af65f8.jpg?imageMogr2/auto-orient/strip|imageView2/2/w/700/format/webp)
 
 3.3 flex-flow 是 flex-direction 属性和 flex-wrap 属性的简写形式，默认值为 row nowrap。

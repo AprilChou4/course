@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BFC 可以阻止元素被浮动元素覆盖</title>
+  </head>
+  <body>
+    <style>
+      .m-f-left {
+        height: 100px;
+        width: 100px;
+        float: left;
+        background: lightblue;
+      }
+      .m-item {
+        width: 200px;
+        height: 200px;
+        background: #eee;
+        overflow: hidden;
+      }
+    </style>
+    <div>
+      这时候其实第二个元素有部分被浮动元素所覆盖，(但是文本信息不会被浮动元素所覆盖)
+      如果想避免元素被覆盖，可触第二个元素的 BFC 特性，在第二个元素中加入
+      overflow: hidden，就会变成：
+    </div>
+    <div class="m-f-left">
+      我是一个左浮动的元素
+    </div>
+    <div class="m-item">
+      我是一个没有设置浮动, 也没有触发 BFC 元素, width: 200px; height:200px;
+      background: #eee;
+    </div>
+  </body>
+</html>
