@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS3实现0.5px的边框</title>
+  </head>
+  <body>
+    <style>
+      .border {
+        height: 100px;
+        margin: 0 auto;
+        border-bottom: 1px solid transparent;
+        border-image: linear-gradient(to bottom, transparent 50%, red 50%) 0 0
+          100%/1px 0;
+      }
+      .border1 {
+        border-bottom: 1px solid red;
+      }
+    </style>
+    <div class="border">0.5像素边框</div>
+    <div class="border1">1像素边框</div>
+  </body>
+</html>
