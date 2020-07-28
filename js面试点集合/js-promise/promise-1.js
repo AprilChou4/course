@@ -3,12 +3,12 @@ class Promise {
   constructor(excutor) {
     this.value = ''
     this.reason = ''
-    this.status = 'padding'
+    this.status = 'pending'
     this.onFulfilledCallback = []
     this.onRejectedCallback = []
     let resolve = (value) => {
-      /*2.这个判断是为了status不可逆 只能从 padding转化为 成功或者失败*/
-      if (this.status == 'padding') {
+      /*2.这个判断是为了status不可逆 只能从 pending转化为 成功或者失败*/
+      if (this.status == 'pending') {
         this.status = 'fulfilled'
         this.value = value
         /*3.当转态改变的时候依次执行队列里面储存的then函数里面对应的回调*/
@@ -18,8 +18,8 @@ class Promise {
       }
     }
     let reject = (reason) => {
-      /*2.这个判断是为了status不可逆 只能从 padding转化为 成功或者失败*/
-      if (this.status == 'padding') {
+      /*2.这个判断是为了status不可逆 只能从 pending转化为 成功或者失败*/
+      if (this.status == 'pending') {
         this.status = 'rejected'
         this.reason = reason
         /*3.当转态改变的时候依次执行队列里面储存的then函数里面对应的回调*/
@@ -70,7 +70,7 @@ class Promise {
         })
       }))
     }
-    if (this.status == 'padding') {
+    if (this.status == 'pending') {
       return (newPromise = new Promise((resolve, reject) => {
         /*3.当excutor为异步的时候先把then方法里面的回调储存在失败或者成功的队列里面*/
         this.onFulfilledCallback.push(() => {
