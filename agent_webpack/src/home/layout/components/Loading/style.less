@@ -1,0 +1,17 @@
+.loading {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 99999999;
+  background-color: rgba(255, 255, 255, .5);
+  :global {
+    .ant-spin {
+      position: absolute !important;
+      left: 50%;
+      top: 50%;
+      transform: translate3D(-50%, -50%, 0);
+    }
+  }
+}

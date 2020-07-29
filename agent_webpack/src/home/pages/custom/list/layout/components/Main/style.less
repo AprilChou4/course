@@ -1,0 +1,24 @@
+.custom-tab {
+    height:100%;
+    padding:0 16px;
+    :global {
+        .ant-tabs {
+            height: 100%;
+            .ant-tabs-bar {
+                margin-bottom:0;
+            }
+            .ant-tabs-nav .ant-tabs-tab {
+                margin-right: 0;
+                color: #323232;
+                &.ant-tabs-tab-active {
+                    color:#000;
+                    font-weight:bold;
+                }
+            }
+            .ant-tabs-tabpane-inactive {
+                display:none;
+            }
+
+        }
+    }
+}

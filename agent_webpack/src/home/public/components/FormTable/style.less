@@ -1,0 +1,22 @@
+.ui-form-table {
+  .ant-form-item {
+    margin: 0;
+  }
+  .ui-form-table-pre-handle {
+    user-select: none;
+    .ui-form-table-icon {
+      display: block;
+      color: #008CFF;
+      &:last-child {
+        margin-top: 3px;
+      }
+    }
+  }
+  .ant-form-explain {
+    display: none!important;
+  }
+  &-th-required::before {
+    content: '* ';
+    color: #FF0000;
+  }
+}

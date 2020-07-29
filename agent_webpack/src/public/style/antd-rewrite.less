@@ -1,0 +1,181 @@
+.ant-form {
+  .ant-form-item-label,
+  .ant-form-item-control {
+    line-height: 32px;
+  }
+  .ant-mentions,
+  textarea.ant-input {
+    margin-bottom: 0;
+  }
+}
+
+.ant-btn {
+  &:not([disabled]) {
+    &.ant-btn-highlight {
+      color: @primary-color;
+      border-color: @primary-color;
+    }
+    &:hover {
+      &.ant-btn-primary {
+        background-color: @hover-color;
+      }
+      &:not(.ant-btn-primary) {
+        color: @hover-color;
+      }
+      &:not(.ant-btn-link) {
+        border-color: @hover-color;
+      }
+    }
+    &:active {
+      &.ant-btn-primary {
+        background-color: @active-color;
+      }
+      &:not(.ant-btn-primary) {
+        color: @active-color;
+      }
+      &:not(.ant-btn-link) {
+        border-color: @active-color;
+      }
+    }
+  }
+}
+
+input.ant-input {
+  &:focus {
+    border-color: @primary-color;
+  }
+}
+
+.ant-input-affix-wrapper {
+  .ant-input-clear-icon {
+    display: none;
+  }
+
+  &:hover {
+    .ant-input-clear-icon {
+      display: inline-block;
+    }
+    // 修复antd的样式bug（ant-input-affix-wrapper hover时，下级所有input都会有hover样式）
+    .ant-popover {
+      .ant-input:not(.ant-input-disabled) {
+        border-color: @border-color-base;
+        &:hover,
+        &:focus {
+          border-color: @primary-color;
+        }
+      }
+    }
+  }
+}
+
+// 时间选择器禁用的选项取消focus的蓝色样式
+li.ant-calendar-time-picker-select-option-disabled:focus {
+  color: #bfbfbf !important;
+}
+
+// Modal标题栏、close
+.ant-modal {
+  &.withForm {
+    .ant-modal-body {
+      padding-bottom: 0;
+    }
+  }
+  .ant-modal-close {
+    color: @text-color;
+  }
+  .ant-modal-close-x {
+    width: 36px;
+    height: 43px;
+    line-height: 43px;
+  }
+  .ant-modal-header {
+    padding: 10px 16px;
+    .ant-modal-title {
+      font-size: 14px;
+      font-weight: bold;
+      color: @text-bold-color;
+    }
+  }
+  .ant-modal-footer {
+    padding: 20px 16px;
+    text-align: center;
+    border-top: none;
+    button + button {
+      margin-left: 20px;
+    }
+  }
+}
+
+// 没有标题带tab的modal
+.ui-tab-modal {
+  .ant-modal-body {
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+    .ant-tabs-tab {
+      margin-right: 0;
+      color: #000;
+      &.ant-tabs-tab-active {
+        font-weight: bold;
+      }
+    }
+    .ant-tabs-tabpane {
+      padding: 0 32px 0 20px;
+    }
+  }
+}
+
+// treeSelect多选
+.ant-select {
+  .ant-select-selection--multiple {
+    .ant-select-selection__choice {
+      background: @primary-color;
+      color: @white;
+      border-radius: 20px;
+    }
+    .ant-select-remove-icon {
+      color: @white;
+    }
+  }
+}
+// 收起详情里的小叉叉 指派客户等
+.ant-collapse-content-box {
+  .ant-tag {
+    margin: 0;
+    background: none;
+    border: none;
+    .anticon-close {
+      padding: 2px;
+      background: #bababa;
+      color: #fff;
+      border-radius: 50%;
+      &:hover {
+        background: #333;
+        color: #fff;
+      }
+    }
+  }
+}
+
+// 表头筛选框的样式
+.ant-table-thead {
+  > tr {
+    > th.table-filter {
+      .ant-table-header-column {
+        position: relative;
+        z-index: 1;
+      }
+      .anticon-filter,
+      .ant-table-filter-icon {
+        width: 100%;
+        > .iconfont {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          margin-top: -5px;
+          font-size: 12px;
+        }
+      }
+    }
+  }
+}

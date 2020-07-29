@@ -1,0 +1,36 @@
+.invoice-limit-row {
+  :global .ant-form-item {
+    margin-right: 20px;
+    .ant-form-item-label {
+      width: 130px!important;
+    }
+    &:nth-child(2) {
+      .ant-form-item-label {
+        width: 110px!important;
+      }
+    }
+    .ant-form-item-control-wrapper {
+      width: 130px!important;
+      .ant-input-number {
+        width: 104px!important;
+        margin-right: 10px;
+      }
+    }
+  }
+}
+.invoice-limit-label {
+  display: inline-block;
+  width: 120px;
+  height: 32px;
+  line-height: 32px;
+  text-align: right;
+  &.required:before{
+    display: inline-block;
+    margin-right: 4px;
+    color: #f5222d;
+    font-size: 13px;
+    font-family: SimSun, sans-serif;
+    line-height: 1;
+    content: '*';
+  }
+}

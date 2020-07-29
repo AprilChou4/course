@@ -1,0 +1,48 @@
+
+.m-joinCompany {
+    .m-title {
+        margin-bottom:64px;
+        font-size:18px;
+        font-weight: bold;
+        color:@primary-color;
+        text-align:center;
+    }
+    .m-hint {
+        margin-top:8px;
+    }
+    :global {
+        .ant-modal-body {
+            padding: 30px 73px 20px;
+            .ant-form {
+                margin-bottom:8px;
+                .ant-form-item {
+                    margin-bottom:30px;
+                    .ant-form-explain {
+                        position: absolute;
+                        line-height:30px;
+                    }
+                    .ant-form-item-children-icon {
+                        right: -30px;
+                        color: #3AB54B;
+                    }
+                    .has-error {
+                        .ant-form-item-children-icon {
+                            color: #f5222d;
+                        }
+                    }
+                    // &.m-vertifyCode  .ant-form-item-children-icon {
+                    //     right: -164px;
+                    // }
+                }
+            }
+        }
+        .ui-vertifyCode .ant-input-affix-wrapper {
+            width: 318px;
+        }
+        .ant-input-affix-wrapper {
+            .ant-input {
+                padding-left: 95px;
+            }
+        }
+    }
+}

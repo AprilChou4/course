@@ -1,0 +1,62 @@
+.m-platform {
+    padding-top:40px;
+    padding-bottom:60px;
+    .l-wrap {
+        width:1200px;
+        margin: 76px auto 40px;
+    }
+    :global {
+        .ant-list-grid .ant-col > .ant-list-item {
+            margin-bottom:0;
+            .ant-card {
+                height:288px;
+            }
+            
+            &:hover {
+                .ant-card-meta-title {
+                    color:@primary-color;
+                }
+                .ant-card-cover {
+                    i {
+                        background:@primary-color;
+                        color:#fff;
+                    }
+                }
+            }
+        }
+        .ant-card-cover {
+            i {
+                position: relative;
+                display: block;
+                margin: -44px auto 0;
+                width: 98px;
+                height: 98px;
+                line-height: 98px;
+                text-align: center;
+                border: 1px dashed #ccc;
+                background-color: #fff;
+                border-radius: 50%;
+                font-size: 20px;
+                color: @primary-color;
+            }
+        }
+        .ant-card-bordered {
+            border-style: dashed;
+        }
+        .ant-card-hoverable:hover {
+            box-shadow: 0 8px 10px 10px rgba(221,221,221,0.50);
+        }
+        .ant-card-meta-title {
+            text-align: center;
+            p {
+                margin-bottom: 12px;
+            }
+        }
+        .ant-card-meta-description {
+            text-align:center;
+            >p{
+                margin-bottom:8px;
+            }
+        }
+    }
+}

@@ -1,0 +1,68 @@
+.form {
+  :global {
+    .ant-form-item-label {
+      > label::after {
+        margin-right: 12px;
+      }
+    }
+  }
+  &.form-addEditStaff {
+    .roles {
+      &:global {
+        &.ant-form-item {
+          .ant-row {
+            margin-left: 56px;
+          }
+        }
+      }
+    }
+  }
+  &.form-approveStaff {
+  }
+}
+
+.dept {
+  &:global {
+    &.ant-form-item {
+      padding-left: 8px;
+    }
+  }
+}
+
+.addDept {
+  &:global {
+    &.ant-form-item {
+      .ant-form-item-control {
+        line-height: 1;
+      }
+    }
+  }
+}
+
+.addDeptIcon {
+  font-size: 12px;
+  margin-right: 4px;
+  font-weight: bold;
+}
+
+.roles {
+  &:global {
+    &.ant-form-item {
+      margin-bottom: 0;
+      .ant-row {
+        // margin-left: 56px;
+        &:not(:last-child) {
+          margin-bottom: 10px;
+        }
+      }
+
+      .ant-checkbox-wrapper {
+        margin-right: 12px;
+        margin-bottom: 10px;
+        + .ant-checkbox-wrapper {
+          margin-left: 0;
+        }
+      }
+    }
+  }
+}

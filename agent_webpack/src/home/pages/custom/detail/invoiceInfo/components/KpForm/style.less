@@ -1,0 +1,75 @@
+
+.invoice-agent-label {
+  display: inline-block;
+  width: 133px;
+  text-align: right;
+  margin-right: 7px;
+}
+
+.invoice-agent-control-wrap {
+  display: inline-block;
+  height: 40px;
+  line-height: 40px;
+  .validated {
+    width: 82px;
+    height: 28px;
+    line-height: 28px;
+    background: #19D86C;
+    border-radius: 15px;
+    text-align: center;
+    color: #fff;
+  }
+  :global {
+    .ant-input {
+      width: 245px;
+      margin-right: 10px;
+    }
+    .ant-btn {
+      color: #008CFF;
+      border: 1px solid #008CFF;
+      &:hover {
+        color: #008CFF;
+        border: 1px solid #008CFF;
+      }
+      &[disabled] {
+        color: #BFBFBF;
+        border-color: #E2E2E2;
+      }
+    }
+  }
+}
+
+:global .kpform-credit-code-modal {
+ .ant-modal-body {
+    position: relative;
+    padding-top: 55px;
+    padding-bottom: 0;
+  }
+}
+
+.tip-text {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  font-size: 14px;
+  color: #FF6400;
+  height: 32px;
+  line-height: 32px;
+  text-align: center;
+  background: #FFF8EE;
+  letter-spacing: 1px;
+}
+
+.help-icon {
+  color: #008CFF;
+  vertical-align: bottom;
+  margin-left: 6px;
+  cursor: pointer;
+}
+
+:global .invoice-kpform-modal {
+  width: auto!important;
+  min-width: 220px;
+  max-width: 335px;
+}

@@ -1,0 +1,60 @@
+:global .custom-form-wrap.is-alone {
+  min-width:1160px;
+  .ant-form {
+    padding:32px;
+  }
+  .form-handle-wrap {
+    text-align: center;
+  }
+  .form-block {
+    dt {
+      height: 16px;
+      line-height: 16px;
+      font-size: 14px;
+      font-weight: bold;
+      color: #000;
+      border-left: 4px solid #008CFF;
+      padding-left: 8px;
+      margin-bottom: 20px;
+    }
+    // 清除按钮隐藏
+    &.from-disabled {
+      .ant-form-item-control .ant-input-suffix .anticon-close-circle {
+        display: none;
+      }
+    }
+  }
+  // row
+  .form-row {
+    .ant-form-item {
+      display: inline-block;
+      .ant-form-item-label {
+        width: 140px;
+      }
+      .ant-form-item-control-wrapper {
+        width: 400px;
+        display: inline-block;
+        vertical-align: top;
+      }
+      // select
+      .ant-select, .ant-input-number, .ant-calendar-picker {
+        width: 100%;
+      }
+      // checkBox
+      .ant-checkbox + span {
+        padding-right: 0;
+      }
+    }
+  }
+  // disabled
+  .ant-input-disabled,
+  .ant-input-number-disabled,
+  .ant-select-disabled .ant-select-selection,
+  .ant-checkbox-disabled .ant-checkbox-inner {
+    color: #323232!important;
+    background-color: #fff!important;
+  }
+  .ant-checkbox-disabled + span {
+    color: #323232;
+  }
+}

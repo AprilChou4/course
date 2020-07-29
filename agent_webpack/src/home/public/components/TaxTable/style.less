@@ -1,0 +1,236 @@
+// ::-webkit-scrollbar {
+//   width: 7px;
+//   /*高宽分别对应横竖滚动条的尺寸*/
+//   height: 7px;
+// }
+
+// ::-webkit-scrollbar-thumb {
+//   border-radius: 10px;
+//   background: #ccc;
+// }
+
+// ::-webkit-scrollbar-track {
+//   border-radius: 10px;
+//   background: #f2f2f2;
+// }
+
+// .ant-taxtable .ant-table-thead > tr > th {
+//   color: #000;
+//   background-color: #f0f1f3;
+//   height: 40px;
+//   font-weight: bold;
+//   padding:12px 8px;
+// }
+
+.ant-taxtable {
+  
+  .ant-table-thead > tr > th {
+    color: #000;
+    background-color: #f0f1f3;
+    height: 40px;
+    font-weight: bold;
+  }
+  .ant-table-thead > tr > th, .ant-table-tbody > tr > td {
+    padding: 8px 10px;
+  }
+  //表内容
+  .ant-table-tbody > tr:nth-child(2n) {
+    background: #edf2f9;
+  }
+  //取消条纹
+  .nostripe {
+    .ant-table-tbody > tr {
+      background: none;
+    }
+  }
+  .ant-table-placeholder:before {
+    content: "";
+    display: block;
+    width: 180px;
+    height: 180px;
+    background: url(/agentAccountMicroService/image/default.25338429.png) no-repeat 50%;
+    background-size: contain;
+    margin: 32px auto;
+  }
+  //不可编辑
+  .notEdit {
+    background: #edf2f9;
+  }
+  //单元格不可编辑
+  .not-edit {
+    background: #f3f3f3;
+  }
+  .nobackground {
+    background: none;
+  }
+  .TaxTable {
+    margin-left: -1px;
+    border-left: 1px solid #e8e8e8;
+  }
+  .TaxTable-total {
+    border-bottom: 1px solid #e8e8e8;
+    // .ant-table-body {
+    //   overflow-x: auto !important;
+    // }
+  }  
+    .small-theader {
+      .ant-table-middle > .ant-table-content > .ant-table-header > table > .ant-table-thead > tr > th,
+      .ant-table-middle
+        > .ant-table-content
+        > .ant-table-scroll
+        > .ant-table-header
+        > table
+        > .ant-table-thead
+        > tr
+        > th,
+      .ant-table-middle
+        > .ant-table-content
+        > .ant-table-fixed-left
+        > .ant-table-header
+        > table
+        > .ant-table-thead
+        > tr
+        > th,
+      .ant-table-middle
+        > .ant-table-content
+        > .ant-table-fixed-right
+        > .ant-table-header
+        > table
+        > .ant-table-thead
+        > tr
+        > th,
+      .ant-table-middle > .ant-table-content > .ant-table-header > table > .ant-table-tbody > tr > td,
+      .ant-table-middle
+        > .ant-table-content
+        > .ant-table-scroll
+        > .ant-table-header
+        > table
+        > .ant-table-tbody
+        > tr
+        > td,
+      .ant-table-middle
+        > .ant-table-content
+        > .ant-table-fixed-left
+        > .ant-table-header
+        > table
+        > .ant-table-tbody
+        > tr
+        > td,
+      .ant-table-middle
+        > .ant-table-content
+        > .ant-table-fixed-right
+        > .ant-table-header
+        > table
+        > .ant-table-tbody
+        > tr
+        > td {
+        padding: 5px 8px;
+      }
+      .ant-table-middle > .ant-table-content > .ant-table-body > table > .ant-table-thead > tr > th {
+        padding: 5px 8px;
+      }
+    }
+   
+    .ant-pagination {
+      margin-top:16px;
+      float: right;
+    }
+    .table-total {
+      overflow-x: hidden;
+      .ant-table-placeholder {
+        display: none;
+      }
+      .ant-table-thead > tr > th {
+        color: rgba(38, 38, 38, 1);
+        background-color:#fff;
+        border:none;
+        font-weight: 400;
+      }
+      .ant-spin-dot.ant-spin-dot-spin{
+        display: none;
+      }
+    }
+    .table-disabled{
+      .ant-spin-dot.ant-spin-dot-spin{
+        display: none;
+      }
+      .ant-spin-container::after{
+        background: #000;
+      }
+      .ant-spin-blur::after{
+        opacity:0.1;
+      }
+    }
+    .table-total-bt7 {
+      bottom: 7px;
+      .ant-table-body {
+        height: 7px;
+      }
+      .ant-table-fixed-left .ant-table-body-outer {
+        display: none;
+      }
+      .ant-table-fixed-right .ant-table-body-outer {
+        display: none;
+      }
+      .ant-table-fixed-right {
+        right: 7px;
+      }
+    }
+    .table-total-bt20 {
+      bottom: 18px;
+      .ant-table-body {
+        height: 17px;
+      }
+      .ant-table-fixed-left .ant-table-body-outer {
+        display: none;
+      }
+      .ant-table-fixed-right .ant-table-body-outer {
+        display: none;
+      }
+      .ant-table-fixed-right {
+        right: 18px;
+      }
+    }
+  
+    .havedata-table-total-bt7 {
+      margin-top: -8px;
+    }
+    .havedata-table-total-bt20 {
+      margin-top: -18px;
+    }
+    .table-body-mt7 {
+      .ant-table-body {
+        margin-top: -7px;
+      }
+    }
+    .table-body-mt17 {
+      .ant-table-body {
+        margin-top: -17px;
+      }
+    }
+  
+    .nobackground {
+      background: none ;
+    }
+  
+    .ie9-table{
+      .ant-table-fixed-right{
+        right: 17px !important;
+        .ant-table-body-inner{
+          overflow-y: hidden !important;
+        }
+      }
+    }
+    .TaxTable-none{
+      display: none !important;
+    }
+}
+  
+
+
+
+
+
+
+
+

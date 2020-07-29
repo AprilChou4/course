@@ -1,0 +1,153 @@
+.antd-table-editables {
+  .disabled {
+    td {
+      color: #eee;
+      cursor: not-allowed;
+      &:hover {
+        .text-wrap {
+          border: none;
+          padding: 0;
+        }
+      }
+    }
+  }
+
+  td {
+    position: relative;
+    // 放在编辑时高度增加1px抖动
+    // box-sizing: content-box;
+
+    .input {
+      width: 100%;
+    }
+    .number {
+      input {
+        text-align: right;
+      }
+    }
+
+    .text-wrap {
+      height: 28px;
+      line-height: 28px;
+      border-radius: 3px;
+    }
+    // 直接显示单元格内 input border
+    .text-wrap-always {
+      .text-wrap;
+      border: 1px solid #e2e2e2;
+      padding: 0 11px;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      background-color: #fff;
+
+      .ant-table-cell {
+        height: 36px;
+        line-height: 36px;
+        left: 20px;
+        right: 20px;
+      }
+    }
+
+    // 编辑表格组件中 ant-table-cell 是在 text-wrap 内部，需要改为相对 td 定位
+    .ant-table-cell {
+      position: absolute;
+      top: 0;
+      left: 8px;
+      right: 8px;
+    }
+
+    &:hover {
+      .text-wrap {
+        border: 1px solid #e2e2e2;
+        background-color: #fff;
+        padding: 0 11px;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+
+        .ant-table-cell {
+          height: 100%;
+          line-height: 100%px;
+          left: 20px;
+          right: 20px;
+        }
+      }
+    }
+    &:focus {
+      .text-wrap {
+        border: none;
+      }
+    }
+    .edit-table-formitem {
+      // 不显示验证信息
+      .ant-form-explain {
+        display: none;
+      }
+
+      // max-height: 32px !important;
+      // height: 32px !important;
+      margin: 0;
+      .ant-form-item-label,
+      .ant-form-item-control-wrapper,
+      .ant-form-item-control {
+        line-height: 28px;
+      }
+
+      input {
+        height: 28px;
+        line-height: 28px;
+      }
+
+      //   .input {
+      //     position: relative;
+      //     // top: -2px;
+      //   }
+      //   .ant-input-number {
+      //     position: relative;
+      //     // top: -1.5px;
+      //   }
+    }
+  }
+
+  .ant-table-tbody {
+    > tr {
+      &:hover {
+        > td {
+          .table-cell-toggle {
+            display: block;
+          }
+        }
+      }
+      > td {
+        .table-cell-toggle {
+          display: none;
+          button {
+            display: block;
+          }
+        }
+      }
+    }
+  }
+
+  .ant-input-number-handler-wrap {
+    display: none !important;
+  }
+}
+
+.left-move-ant-table {
+  // position: relative;
+  // width: calc(100% + 0px);
+  // left: -20px;
+  // padding-left: 20px;
+
+  // // 左移表格，隐藏 pre column
+  // .ant-table-scroll {
+  //   width: calc(100% + 20px);
+  //   position: relative;
+  //   left: -20px;
+  // }
+  // .ant-table-fixed-left {
+  //   left: -20px;
+  // }
+}

@@ -1,0 +1,179 @@
+.ant-supertables-wrapper {
+  height: 100%;
+  position: relative;
+}
+.ant-supertables {
+  position: relative;
+  z-index: 1;
+  table {
+    table-layout: fixed;
+    width: 100%;
+    background: #fff;
+    transition: none !important;
+    td {
+      .table-cell {
+        display: block;
+        position: relative;
+        height: 36px;
+        line-height: 36px;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        .table-cell-edit {
+          text-decoration: underline;
+        }
+        .table-cell-normal {
+          color: inherit;
+        }
+      }
+      &.operate-cell a {
+        margin: 0 4px;
+      }
+    }
+    td.dragtable-empty-cell {
+      /** 基本是白色 其余有其他颜色的模块自行处理 **/
+      background: #ffffff !important;
+      border: 0px none !important;
+    }
+    .ant-table-thead {
+      tr {
+        th.dragtable-empty-cell {
+          /** 基本是白色 其余有其他颜色的模块自行处理 **/
+          background: #ffffff !important;
+          border: 0px none !important;
+        }
+      }
+    }
+  }
+  .ant-table-fixed-left,
+  .ant-table-fixed-right {
+    table {
+      // 解决固定列宽度问题
+      width: 0;
+    }
+  }
+  .ant-table-body {
+    background: none !important;
+  }
+  .ant-table-thead > tr > th,
+  .ant-table-tbody > tr > td {
+    padding: 0 8px;
+    height: 36px;
+    vertical-align: middle;
+    border-color: #e2e2e2;
+
+    &.table-cell-pre {
+      border: none !important;
+      background: #fff !important;
+      padding: 0 !important;
+    }
+    .table-cell-toggle,
+    .table-cell-toggle-table {
+      display: none;
+    }
+  }
+  .ant-table-tbody > tr:hover > td {
+    .table-cell-toggle {
+      display: inline-block;
+    }
+    .table-cell-toggle-table {
+      display: table-cell;
+    }
+  }
+  .ant-table-tbody > tr:nth-child(even) {
+    background-color: #f8f8f8;
+  }
+  .ant-table-thead > tr > th {
+    height: 40px;
+  }
+  .ant-table-header {
+    background: none !important;
+    & > table {
+      border: none;
+    }
+  }
+  .ant-table-thead {
+    background: #f0f1f3 !important;
+    & > tr > th {
+      border: 1px solid #e2e2e2;
+    }
+  }
+  .ant-table-header,
+  .ant-table-thead {
+    & > tr > th {
+      color: #000;
+      background: none !important;
+    }
+  }
+  .ant-table-bordered .ant-table-fixed-left table,
+  .ant-table-bordered .ant-table-fixed-right table {
+    border: none;
+  }
+  &.dragtable {
+    .ant-table-thead {
+      th {
+        position: relative;
+        zoom: 1;
+      }
+      .dragtable-drag-line {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        width: 4px;
+        overflow: hidden;
+        cursor: col-resize;
+      }
+      .dragtable-empty-cell {
+        padding: 0 !important;
+        .ant-table-column-sorter {
+          display: none;
+        }
+        .ant-table-header-column,
+        .ant-table-column-title {
+          width: 100%;
+          display: block;
+          padding: 0;
+        }
+        .dragtable-empty-div {
+          width: 100%;
+          padding: 0;
+        }
+      }
+    }
+    .dragtable-auxiliary-line {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 4px;
+      border-left: 1px dashed #e6e6e6;
+      display: none;
+      z-index: 1;
+      cursor: col-resize;
+    }
+  }
+}
+
+.ant-virtual-table {
+  position: absolute;
+  z-index: 0;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  display: none;
+  & > table {
+    width: 100%;
+    & > tbody {
+      & > tr {
+        &:first-child {
+          & > td {
+            border-top: none;
+          }
+        }
+        & > td {
+          border: 1px solid #e2e2e2;
+        }
+      }
+    }
+  }
+}

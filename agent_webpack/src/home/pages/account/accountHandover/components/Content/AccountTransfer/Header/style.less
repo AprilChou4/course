@@ -1,0 +1,35 @@
+.name{
+  :global{
+    .has-success{
+      .ant-form-explain{
+        color: @text-color;
+      }
+    }
+  }
+}
+
+.company{
+  padding: 12px 7px;
+  margin-top: 8px;
+  background: #F8F8F8;
+}
+
+.accountList{
+  :global{
+    .ant-form-item-control{
+      .ant-form-item-children{
+        .ant-select-selection--multiple{
+          max-height: 86px;
+          overflow: auto;
+
+          .ant-select-selection__clear,.ant-select-arrow {
+            top: 50%;
+          }
+        }
+      }
+      .ant-form-explain{
+        margin-top: -12px;
+      }
+    }
+  }
+}

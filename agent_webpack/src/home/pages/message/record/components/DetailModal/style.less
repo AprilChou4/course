@@ -1,0 +1,42 @@
+// 详情弹窗
+    .msgrecord-detailModal {
+        padding:20px;
+        :global {
+            .ant-modal-body {
+                padding:16px 24px;
+                .ant-form-item-label, .ant-form-item-control {
+                    line-height:1.5;
+                    font-size: @font-size-base;
+                }
+                .ant-form-item {
+                    margin-bottom:10px;
+                    color: #000;
+                }
+            }
+            .ant-modal-footer {
+              text-align: center;
+            }
+
+            .ant-table-wrapper {
+                table {
+                    color:#323232;
+                    font-size: @font-size-base;
+                }
+                .ant-table-thead > tr.ant-table-row-hover:not(.ant-table-expanded-row) > td, .ant-table-tbody > tr.ant-table-row-hover:not(.ant-table-expanded-row) > td, .ant-table-thead > tr:hover:not(.ant-table-expanded-row) > td, .ant-table-tbody > tr:hover:not(.ant-table-expanded-row) > td {
+                    background: #fff;
+                }
+                .ant-table-bordered .ant-table-tbody > tr {
+                    height:28px;
+                }
+                .ant-table-bordered .ant-table-tbody > tr > td {
+                    padding:4px 12px;
+                    vertical-align: middle;
+                }
+                .ant-table .ant-table-content {
+                    height: 246px;
+                    overflow: auto;
+                }
+            }
+        }
+    }
+

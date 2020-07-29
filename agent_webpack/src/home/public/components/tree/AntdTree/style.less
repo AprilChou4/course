@@ -1,0 +1,16 @@
+.antdTree.ant-tree {
+  user-select: none;
+  &::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+    background-color: @scrollbar-bg-color;
+  }
+  li {
+    .ant-tree-node-content-wrapper {
+      &.ant-tree-node-selected {
+        color: @white;
+        background-color: @primary-color;
+      }
+    }
+  }
+}

@@ -1,0 +1,92 @@
+.m-choose {
+    padding: 100px 0;
+    height: 436px;
+    background: url('~@public/images/choose-bg.jpg') 50% no-repeat;
+    background-size:100% 100%;
+    color: #fff;
+    .l-wrap {
+        width:1200px;
+        margin:0 auto;
+    }
+    .m-suitable {
+        color:#323232;
+    }
+    :global {
+        .ant-card {
+            margin:0 auto;
+            background: none;
+            border: none;
+            width:350px;
+            .ant-card-body {
+                padding:20px 0;
+            }
+            .ant-card-cover{
+                    &:hover {
+                        img {
+                            transform:scale(1.2) translate(0,-50px);
+                        }
+                    }
+                > img {
+                    width: 80px;
+                    margin: 0 auto;
+                    transition:All 0.4s ease-in-out;
+                }
+            }
+            .ant-card-meta-title {
+                margin-bottom:16px;
+                color:#fff;
+                font-weight:bold;
+                text-align:center;
+                font-size:16px;
+            }
+            .ant-card-meta-description {
+                color:#fff;
+                text-align:center;
+                font-size:14px;
+                p {
+                    margin-bottom:10px;
+                }
+            }
+        }
+        .ant-descriptions {
+            .ant-descriptions-title {
+                margin-bottom:20px;
+                font-size:16px;
+            }
+            
+            .ant-descriptions-row > td {
+                padding-bottom: 18px;
+                vertical-align: top;
+            }
+            .ant-descriptions-item-label, .ant-descriptions-item-content {
+                color:#646464;
+                line-height:2;
+            }
+            .ant-descriptions-item-label {
+                vertical-align:top;
+                padding-right:62px;
+            }
+            .ant-descriptions-item-content {
+                width:388px;
+            }
+            
+        }
+        .ant-popover {
+            width:1140px;
+            .ant-popover-arrow {
+                background:#fff;
+                width:20px;
+                height:36px;
+            }
+            .ant-popover-inner {
+                border-radius:8px;
+            }
+            .ant-popover-inner-content {
+                padding: 40px 38px 20px;
+            }
+            .ant-popover-placement-bottomRight > .ant-popover-content > .ant-popover-arrow {
+                right: 32px;
+            }
+        }
+    }
+}

@@ -1,0 +1,26 @@
+.tree {
+  &:global {
+    &.ant-tree {
+      height: 100%;
+      padding-right: 7px;
+      overflow: auto;
+      > li:first-child {
+        padding-top: 0;
+      }
+      li {
+        padding: 2px 0;
+      }
+      &.ant-tree-block-node {
+        li {
+          .ant-tree-node-content-wrapper {
+            width: auto;
+            min-width: calc(100% - 24px);
+            // text-overflow: ellipsis;
+            // white-space: nowrap;
+            // overflow: hidden;
+          }
+        }
+      }
+    }
+  }
+}

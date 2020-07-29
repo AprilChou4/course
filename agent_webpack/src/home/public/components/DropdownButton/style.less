@@ -1,0 +1,43 @@
+.antd-dropdown-button {
+  position: relative;
+  display: inline-block;
+  background-color: @primary-color;
+  border-radius: @border-radius-base;
+  transition: all 0.5s ease;
+
+  .ant-btn {
+    border: 0;
+  }
+
+  > .ant-btn {
+    &:first-of-type {
+      border-top-right-radius: 0px;
+      border-bottom-right-radius: 0px;
+      padding: 0 12px;
+    }
+    &:last-of-type {
+      border-top-left-radius: 0px;
+      border-bottom-left-radius: 0px;
+      padding: 0 8px;
+    }
+  }
+
+  &:hover {
+    background-color: @hover-color;
+
+    .ant-btn.ant-btn-primary {
+      background-color: @hover-color;
+    }
+  }
+  &:not(:hover) {
+    .ant-btn.ant-btn-primary {
+      background-color: @primary-color;
+    }
+  }
+}
+
+.antd-dropdown-button-overlay {
+  .ant-dropdown-menu {
+    padding: 0;
+  }
+}

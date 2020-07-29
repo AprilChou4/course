@@ -1,0 +1,46 @@
+.ui-ant-calendar {
+  position: relative;
+  display: inline-block;
+  &:before {
+    content: attr(enddate);
+    position: absolute;
+    left: 93px;
+    top: 6px;
+  }
+  & > .ant-btn {
+    width: 32px;
+    padding: 0;
+    &:first-child {
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+    &:last-child {
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+    }
+  }
+  input {
+    background: none;
+  }
+  // .ant-calendar-picker-clear {
+  //     display: none;
+  // }
+  .ant-calendar-picker {
+    margin: 0 -1px;
+    z-index: 1;
+    vertical-align: top;
+  }
+}
+
+.ui-ant-calendar-picker {
+  .ant-calendar {
+    position: relative;
+    left: -36px !important;
+  }
+  &.ant-calendar-picker-container-placement-bottomRight {
+    .ant-calendar {
+      left: auto !important;
+      right: -36px;
+    }
+  }
+}

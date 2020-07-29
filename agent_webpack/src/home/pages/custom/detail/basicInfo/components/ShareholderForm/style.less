@@ -1,0 +1,39 @@
+.shareholder-table-wrap {
+  :global .shareholder-table {
+    .ant-table-thead > tr > th {
+      background: #F0F1F3;
+      padding: 10px 0;
+      text-align:center;
+    }
+    .ant-table-tbody > tr > td {
+      padding:0;
+      font-size: 14px;
+      vertical-align: middle;
+      .ant-form-item {
+        margin-bottom: 0;
+      }
+      .ant-input, .ant-select-selection {
+        border-radius: 0;
+      }
+      .ant-input-number {
+        width: 100%;
+        border-radius: 0;
+      }
+    }
+    // fixed-z-index
+    .ant-table-fixed-left, .ant-table-fixed-right {
+      z-index: 10;
+    }
+    // disabled
+    .ant-input-disabled,
+    .ant-input-number-disabled,
+    .ant-select-disabled .ant-select-selection {
+      color: #323232;
+      background-color: #fff!important;
+    }
+  }
+}
+.add-btn {
+  padding: 0!important;
+  margin-top: 5px;
+}

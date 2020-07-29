@@ -1,0 +1,47 @@
+.account-table {
+  :global {
+    .ant-table-title {
+        padding: 7px 8px;
+        border: none !important;
+        margin-bottom: 4px;
+        background-color: #FFF8EE;
+        color: #FF6400;
+        font-size: 13px;
+        .iconfont {
+            margin-right: 8px;
+        }
+    }
+    table{
+        tr{
+            td{
+                &.accountName{
+                    position: relative;
+                    .newCustomer-img{
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 18px;
+                        height: 18px;
+                        background: url(../../../../../public/images/customer_new.png) no-repeat;
+                        background-size: 100% 100%;
+                    }
+                }
+            }
+        }
+    }
+    .icon-jiao:before {
+      display: inline-block;
+      content: '交';
+      color: #fff;
+      background-color: #FF6400;
+      font-size: 12px;
+      width: 16px;
+      height: 20px;
+      line-height: 20px;
+      text-align: center;
+      border-radius: 2px;
+    }
+  }
+}
+
+

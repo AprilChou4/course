@@ -1,0 +1,64 @@
+.ui-ant-search-input {
+  display: inline-block;
+  .ant-input-affix-wrapper{
+    .ant-input {
+      // padding-right: 132px !important;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+    .ant-input-suffix {
+      padding-right: 0 !important;
+      top: 1px;
+      right: 1px;
+      bottom: 1px;
+      transform: none;
+      background-color: #fff;
+      & > * {
+        float: left;
+      }
+      & > a {
+        margin-right: 4px;
+      }
+      .ant-btn {
+        min-width: 52px;
+        margin-top: -1px;
+      }
+      .ant-input-clear-icon {
+        position: relative;
+        vertical-align: top;
+      }
+    }
+    .ant-popover-arrow {
+      display: none;
+    }
+    .ant-popover {
+      padding-top: 7px !important;
+      left: 0 !important;
+    }
+    .ant-form-item {
+      margin-bottom: 12px;
+    }
+    .anticon-close-circle {
+      margin-right: 4px;
+    }
+    .popover-footer {
+      margin-bottom: 0;
+      text-align: center;
+      .ant-btn {
+        margin: 0 6px;
+      }
+    }
+    .ant-popover-inner-content {
+      padding: 0 0 16px;
+      overflow: auto;
+      max-height: 700px;
+    }
+    .ant-checkbox-wrapper {
+      margin-left: 0;
+      + .ant-checkbox-wrapper{
+        margin-left: 0;
+      }
+    }
+  }
+}

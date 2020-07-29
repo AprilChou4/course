@@ -1,0 +1,53 @@
+.m-addBtn {
+    margin-right:12px;
+    background: @primary-color;
+    display: inline-block;
+    border-radius:@border-radius-base;
+    color: #fff;
+    // height: 32px;
+    transition: all .5s ease;
+    &[disabled] {
+        background:@disabled-bg;
+        border: 1px solid  @border-color-base;
+        :global {
+            .ant-btn-primary{
+                color: @disabled-color;
+                background-color: @disabled-bg;
+                border-color: @disabled-bg;
+                text-shadow:none;
+                box-shadow:none;
+            }
+            .ant-divider {
+                background:#ccc;
+            }
+        }
+    }
+    &:hover {
+        background-color:  @hover-color!important;
+        border-color:  @hover-color;
+        :global {
+            .ant-btn-primary {
+                color: #fff;
+                background-color: @hover-color;
+                border-color:@hover-color ;
+                &:focus {
+                    background-color:  @hover-color!important;
+                    border-color:  @hover-color;
+                }
+            }
+        }
+    }
+    :global {
+        .ant-btn-primary {
+            &:focus {
+                background-color:  @primary-color!important;
+                border-color:  @primary-color;
+            }
+        }
+    }
+
+    .m-divider {
+        margin:0;
+    }
+
+}

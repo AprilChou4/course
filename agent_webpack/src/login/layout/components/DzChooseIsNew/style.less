@@ -1,0 +1,58 @@
+.m-choose {
+    .m-icon {
+        position: absolute;
+        right: 12px;
+        top: 8px;
+        text-align: right;
+    }
+    .m-joinIcon {
+        font-size: 30px;
+        font-weight: normal;
+    }
+    .m-checked {
+        :global {
+            .ant-card {
+                border-color:@primary-color;
+            }
+            .ant-card-meta-title {
+                color:@blue;
+            }
+        }
+        .m-icon {
+            color:@primary-color;
+        }
+    }
+    :global {
+        .ant-col {
+            .ant-list-item {
+                width:216px;
+                margin:0 auto;
+                &:hover {
+                    .ant-card-meta-title {
+                        color: @blue;
+                    }
+                }
+                .ant-card {
+                    position: relative;
+                    height:198px;
+                    border-radius:3px;
+                }
+                .ant-card-body {
+                    padding-top: 60px;
+                }
+                .ant-card-meta-title {
+                    font-weight:bold;
+                    text-align: center;
+                    p {
+                        margin-top:12px;
+                        margin-bottom: 0;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.m-nextBtn {
+    margin-top:34px;
+}

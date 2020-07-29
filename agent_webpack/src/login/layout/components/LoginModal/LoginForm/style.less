@@ -1,0 +1,41 @@
+.login-form {
+    .m-loginBtn {
+        margin-bottom:12px;
+    }
+    .m-code {
+        width:250px;
+        margin-right:8px;  
+    }
+    .m-imgCode {
+        float: right;
+        img {
+            width: 82px;
+            height:40px;
+        }
+    }
+    .m-passwordOperate {
+        height:auto !important;
+        .m-forget {
+            position: absolute;
+            right:0;
+        }
+        :global {
+            .ant-form-item-control {
+                line-height:1;
+            }
+            .ant-form-item-children {
+                width: 100%;
+                display: inline-block;
+            }
+        }
+    }
+    :global {
+        .ant-form-item {
+            margin-bottom:30px;
+            height:40px;
+            .ant-form-explain {
+                line-height:30px;
+            }
+        }
+    }
+}
