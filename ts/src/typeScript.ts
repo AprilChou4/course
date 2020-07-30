@@ -3,3 +3,4 @@ let data = {
   a: 1,
   b: 2,
 }
+const nameMe: string = 'king'
