@@ -1,0 +1,10 @@
+1.vue-cli 初始化项目
+2.格式化双引号 https://www.jianshu.com/p/b5c196902300
+2.配置路由 vue-router https://www.jianshu.com/p/4c5c99abb864
+3.引入elementUI
+3.初始化全局样式，并在main引入，安装css-loader  npm install sass-resources-loader --save-dev  
+https://www.jianshu.com/p/81342e8d5c86
+https://blog.csdn.net/weixin_40628401/article/details/100904010
+4.安装vuex 配置store
+
+
