@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>我的第一个vue</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  </head>
+  <body>
+    <div id="app">
+      {{message}}
+      <span v-html="rawHtml"></span>
+      <my-component-name
+        v-for="item in list"
+        v-bind:item="item"
+        v-bind:key="item.name"
+      ></my-component-name>
+    </div>
+
+    <script src="./index.js"></script>
+  </body>
+</html>
