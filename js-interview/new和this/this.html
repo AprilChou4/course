@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>this</title>
+  </head>
+  <body>
+    <script>
+      //   function add(c, d) {
+      //     console.log(this.a + this.b + c + d)
+      //   }
+      //   add(3, 4) // NaN
+      //   var ten = { a: 1, b: 2 }
+      //   add.call(ten, 3, 4) //10
+      //   add.apply(ten, [3, 4]) //10
+      //   // bind 场景
+      //   var small = {
+      //     a: 1,
+      //     go: function (b, c, d) {
+      //       console.log(this.a + b + c + d)
+      //     },
+      //   }
+      //   var large = {
+      //     a: 100,
+      //   }
+      //   var bindTest = small.go.bind(large, 1, 2, 3)
+      //   bindTest() //106
+
+      //   // 还有一种写法
+      //   var bindTest = small.go.bind(large, 1) //已知部分参数
+      //   bindTest(2, 3) //剩余参数追加
+      //   small.go.bind(large, 1)(2, 3)
+
+      //   let name = 'window-names' //
+      //   const obj = {
+      //     name: 'es6',
+      //     say: () => {
+      //       console.log(this === window, '----obj-----')
+      //       console.log(this.name, window.name, '----obj-----')
+      //     },
+      //   }
+      //   obj.say() //true
+
+      //   const obj1 = {
+      //     name: 'es6',
+      //     say() {
+      //       console.log(this === window, '---obj1---')
+      //       console.log(this.name, '---obj1---')
+      //     },
+      //   }
+
+      //   obj1.say()
+
+      // 原型链上
+      Cat.prototype.sayName = () => {
+        console.log(this === window)
+        return this.name
+      }
+      const cat = new Cat('mm')
+      cat.sayName()
+      // true     this为window
+      // ""  window.name 为空
+
+      // 解决方法 ===> sayName 更改成普通函数
+
+      function Cat(name) {
+        this.name = name
+      }
+      Cat.prototype.sayName = function () {
+        console.log(this === ff)
+        return this.name
+      }
+      const ff = new Cat('ff')
+      ff.sayName()
+      //   // 事件函数 箭头函数在声明的时候就绑定了它的上下文环境，要动态改变上下文是不可能的。
+      //   const button = document.getElementById('mngb')
+      //   button.addEventListener('click', () => {
+      //     console.log(this === window) // true
+      //     this.innerHTML = 'clicked button'
+      //   })
+      //   // 其实我们是要this执行被点击的button
+      //   // 解决方法 --> 回调函数用普通函数
+      //   const button = document.getElementById('mngb')
+      //   button.addEventListener('click', function (e) {
+      //     console.log(this === button)
+      //     console.log(e.target)
+      //     this.innerHTML = 'clicked button'
+      //   })
+    </script>
+  </body>
+</html>

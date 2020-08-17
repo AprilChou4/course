@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>_proto_和prototype的关系及区别</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      //   // 构造函数
+      //   function Person() {}
+      //   Person.prototype.name = 'king'
+      //   const person1 = new Person()
+      //   console.log(person1.name, '----person1.name-----') //king
+      //   console.log(Person.prototype, 'Person.prototype') //{name: "king", constructor: ƒ}
+      //   console.log(
+      //     person1.__proto__ === Person.prototype,
+      //     '----person1.__proto__ === Person.prototype-----'
+      //   )
+      //   console.log(
+      //     Person === Person.prototype.constructor,
+      //     '----Person === Person.prototype.construnctor-----'
+      //   )
+      //   console.log(
+      //     person1.constructor === Person,
+      //     '----person1.constructor === Person-----'
+      //   )
+
+      function Person() {}
+      // 原型属性
+      Person.prototype.name = 'king'
+      const person1 = new Person()
+      // 实例属性
+      //   person1.name = '周小熊'
+      console.log(
+        person1.hasOwnProperty('name'),
+        'name' in person1,
+        Object.keys(Person.prototype),
+        person1.name,
+        '-person1.name-----',
+        Object.prototype.__proto__
+      )
+    </script>
+  </body>
+</html>

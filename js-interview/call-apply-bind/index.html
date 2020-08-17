@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>call-apply-bind</title>
+  </head>
+  <body>
+    <script>
+      const name = 'king'
+      const age = '18'
+      const obj = {
+        name: '小张',
+        objAge: this.age,
+        myFun: function (from, to) {
+          console.log(from, to, '---from, to---')
+          console.log(
+            this.name + '年龄' + this.age,
+            '来自' + from + '去往' + to
+          )
+        },
+      }
+      const db = {
+        name: '德玛',
+        age: 99,
+      }
+      obj.myFun.call(db, '成都', '上海') // 德玛 年龄 99  来自 成都去往上海
+      obj.myFun.apply(db, ['成都', '上海']) // 德玛 年龄 99  来自 成都去往上海
+      obj.myFun.bind(db, '成都', '上海')() // 德玛 年龄 99  来自 成都去往上海
+      obj.myFun.bind(db, ['成都', '上海'])() // 德玛 年龄 99  来自 成都, 上海去往undefined
+      //   剩余参数追加
+      obj.myFun.bind(db, ['成都', '上海'])('宁波') // 德玛 年龄 99  来自 成都, 上海去往宁波
+    </script>
+  </body>
+</html>
