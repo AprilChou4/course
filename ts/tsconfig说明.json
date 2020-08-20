@@ -3,8 +3,8 @@
     "watch": true,
     "outDir": "./dist",
     "target": "ES5",
-    "strictNullChecks": true,
-    "noImplicitAny": true
+    "strictNullChecks": true, //可以检测null
+    "noImplicitAny": true //当函数参数出现any类型
   },
   "include": ["./src/**/*", "tsconfig说明.ts"]
 }
