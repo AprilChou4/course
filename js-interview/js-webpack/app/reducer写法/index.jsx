@@ -1,7 +1,6 @@
 //Greeter,js
 import React, { useState, useEffect, useRef } from 'react';
 import config from './config.json';
-import styles from './Greeter.css'; //导入
 import { connect } from 'react-redux';
 const Counter = ({ state, dispatch }) => {
   return (

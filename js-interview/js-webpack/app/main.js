@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Greeter from './Greeter';
+import Layout from './Layout';
 import { createStore } from 'redux';
 import { Provider } from 'react-redux';
 import './main.css'; //使用require导入css文件
@@ -23,7 +23,7 @@ const store = createStore(reducer);
 console.log(store.getState());
 ReactDOM.render(
   <Provider store={store}>
-    <Greeter />
+    <Layout />
   </Provider>,
   document.getElementById('root'),
 );
