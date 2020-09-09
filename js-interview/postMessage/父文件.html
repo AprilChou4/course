@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>我是父窗口</title>
+    <script>
+      const sendPost = () => {
+        // 获取id为otherPage的iframe窗口对象
+
+        var iframeWin = document.getElementById('otherPage').contentWindow
+        // 向该窗口发送消息
+        iframeWin.postMessage(
+          { king: document.getElementById('message').value },
+          '*'
+        )
+      }
+
+      // 监听跨域请求的返回
+      window.addEventListener(
+        'message',
+        function (event) {
+          console.log(event, event.data, '-----dasdasdasd-------------')
+        },
+        false
+      )
+    </script>
+  </head>
+  <body></body>
+</html>

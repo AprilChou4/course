@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>我是子文件</title>
+    <script type="text/JavaScript">
+          window.addEventListener(
+          'message',
+          function (event) {
+            // 监听父窗口发送过来的数据向服务器发送post请求
+
+            var data = event.data
+            console.log(
+              data,
+              '----- 监听父窗口发送过来的数据----dsada----------------'
+            )
+          },
+          false
+        )
+      //   向父窗口发送消息
+        function toParent(){
+            window.parent.postMessage({ name: 'april' }, '*')
+        }
+    </script>
+  </head>
+  <body>
+    <div>
+      <h1 className="{styles.title}" onclick="toParent()">Page index</h1>
+    </div>
+  </body>
+</html>
