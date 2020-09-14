@@ -2,8 +2,6 @@ import React from 'react';
 import { HashRouter as Router, Link, Route, Switch, useHistory, Redirect } from 'react-router-dom';
 
 import { Button } from 'antd';
-import logo from './logo.svg';
-import './App.css';
 
 const Login = () => {
   const history = useHistory();
