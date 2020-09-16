@@ -20,7 +20,7 @@ function reducer(state = 0, action) {
   }
 }
 const store = createStore(reducer);
-console.log(store.getState());
+// console.log(store.getState());
 ReactDOM.render(
   <Provider store={store}>
     <Layout />

@@ -1,64 +1,56 @@
 import React from 'react';
-import { Button } from 'antd';
-const HOC = (InnerComponent) =>
-  class extends React.Component {
-    constructor() {
-      super();
-      this.state = {
-        count: 0,
-      };
-    }
-    componentWillMount() {
-      console.log('HOC will mount');
-    }
-    componentDidMount() {
-      console.log('HOC did mount');
-    }
-    update() {
-      const { count } = this.state;
-      this.setState({
-        count: count + 1,
-      });
-    }
-    render() {
-      const newProps = this.state;
-      return <InnerComponent {...this.props} {...newProps} update={this.update.bind(this)} />;
-    }
-  };
-const MyButton = (props) => (
-  <Button onClick={props.update}>
-    {props.children}-- {props.count}
-  </Button>
-); //无状态组件
-const NewButton = HOC(MyButton); //无状态组件
-class Label extends React.Component {
-  //传统组件
-  componentWillMount() {
-    console.log('C will mount');
+// async 函数的实现，就是将 Generator 函数和自动执行器，包装在一个函数里。
+// async function fn(args) {
+//   // ...
+// }
+
+// // 等同于
+
+// function fn(args) {
+//   return spawn(function* () {
+//     // ...
+//   });
+// }
+class App extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {};
   }
   componentDidMount() {
-    console.log('C did mount');
+    function spawn(genF) {
+      return new Promise(function (resolve, reject) {
+        var gen = genF();
+        function step(nextF) {
+          try {
+            var next = nextF();
+          } catch (e) {
+            return reject(e);
+          }
+          if (next.done) {
+            return resolve(next.value);
+          }
+          Promise.resolve(next.value).then(
+            function (v) {
+              step(function () {
+                return gen.next(v);
+              });
+            },
+            function (e) {
+              step(function () {
+                return gen.throw(e);
+              });
+            },
+          );
+        }
+        step(function () {
+          return gen.next(undefined);
+        });
+      });
+    }
   }
-  render() {
-    return (
-      <label onClick={this.props.update}>
-        {this.props.children}-{this.props.count}
-      </label>
-    );
-  }
-}
-const LabelHoc = HOC(Label);
-
-class App extends React.Component {
   //根组件
   render() {
-    return (
-      <div>
-        <NewButton>button</NewButton>
-        <br />
-        <LabelHoc>label</LabelHoc>
-      </div>
-    );
+    return <div>11</div>;
   }
 }
 
