@@ -1,56 +1,41 @@
 import React from 'react';
-// async 函数的实现，就是将 Generator 函数和自动执行器，包装在一个函数里。
-// async function fn(args) {
-//   // ...
-// }
 
-// // 等同于
+// import { Select, Button } from 'antd';
+// import SuperSelect from './SuperSelect';
+// // import NpmSelect from 'antd-virtual-select';
+// // import SuperSelect from "antd-virtual-select";
+// const Option = Select.Option;
+// import 'antd/dist/antd.css';
+// // import './styles.css';
 
-// function fn(args) {
-//   return spawn(function* () {
-//     // ...
-//   });
-// }
+const children = [];
+
+for (let i = 0; i < 10000; i++) {
+  children.push(
+    <Option value={i + 'aab'} key={i}>
+      {i + 'aab'}
+    </Option>,
+  );
+}
+
 class App extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {};
-  }
   componentDidMount() {
-    function spawn(genF) {
-      return new Promise(function (resolve, reject) {
-        var gen = genF();
-        function step(nextF) {
-          try {
-            var next = nextF();
-          } catch (e) {
-            return reject(e);
-          }
-          if (next.done) {
-            return resolve(next.value);
-          }
-          Promise.resolve(next.value).then(
-            function (v) {
-              step(function () {
-                return gen.next(v);
-              });
-            },
-            function (e) {
-              step(function () {
-                return gen.throw(e);
-              });
-            },
-          );
-        }
-        step(function () {
-          return gen.next(undefined);
-        });
-      });
+    //  1、1、2、3、5、8、13、21
+    function fun(n) {
+      var num1 = 1,
+        num2 = 1,
+        num3 = 0;
+      for (var i = 0; i < n - 2; i++) {
+        num3 = num1 + num2;
+        num1 = num2;
+        num2 = num3;
+      }
+      return num3;
     }
+    fun(1);
   }
-  //根组件
   render() {
-    return <div>11</div>;
+    return <div className="App">数组</div>;
   }
 }
 

@@ -118,6 +118,7 @@ const req = (config = initialConfig) => {
     method: method || type, // 适配其他 method
     headers: {
       'Content-Type': contentType,
+      'Cache-Control': 'no-cache',
       ...headers,
     },
     params: type === 'get' ? { ...querys, ...config.data } : querys, // 请求参数 url 参数

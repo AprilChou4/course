@@ -18,6 +18,9 @@ module.exports = {
         test: /(\.jsx|\.js)$/,
         use: {
           loader: 'babel-loader',
+          query: {
+            babelrc: true,
+          },
         },
         exclude: /node_modules/,
       },
@@ -38,6 +41,9 @@ module.exports = {
                 localIdentName: '[name]__[local]--[hash:base64:5]', // 指定css的类名格式
               },
             },
+          },
+          {
+            loader: 'less-loader',
           },
         ],
       },
