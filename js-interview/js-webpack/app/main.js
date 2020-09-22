@@ -20,8 +20,15 @@ function reducer(state = 0, action) {
       break;
   }
 }
+function addTodo(text) {
+  return {
+    type: 'ADD',
+  };
+}
 const store = createStore(reducer);
-// console.log(store.getState());
+const unsubscribe = store.subscribe(() => console.log(store.getState(), '=====subscribe====='));
+store.dispatch(addTodo('Learn about actions'));
+console.log(store.getState());
 ReactDOM.render(
   <Provider store={store}>
     <Layout />

@@ -1,42 +1,40 @@
-import React from 'react';
+// 利用useRef / creatRef 都可以实现input聚焦
+import React, { useState, useEffect, useRef, createRef } from 'react';
+import config from './config.json';
+import { connect } from 'react-redux';
+import { Input, Button } from 'antd';
+// createRef 每次渲染都会返回一个新的引用，而 useRef 每次都会返回相同的引用。
+const Counter = ({ state, dispatch }) => {
+  const [count, setCount] = useState(0);
+  const btnRef = useRef(null);
 
-// import { Select, Button } from 'antd';
-// import SuperSelect from './SuperSelect';
-// // import NpmSelect from 'antd-virtual-select';
-// // import SuperSelect from "antd-virtual-select";
-// const Option = Select.Option;
-// import 'antd/dist/antd.css';
-// // import './styles.css';
+  // useEffect(() => {
+  //   const handleOnclick = () => {
+  //     setCount(count + 1);
+  //   };
+  //   btnRef.current.addEventListener('click', handleOnclick, false);
+  //   return () => {
+  //     btnRef.current.removeEventListener('click', handleOnclick, false);
+  //   };
+  // }, [count]);
 
-const children = [];
-
-for (let i = 0; i < 10000; i++) {
-  children.push(
-    <Option value={i + 'aab'} key={i}>
-      {i + 'aab'}
-    </Option>,
+  return (
+    <div>
+      count: {count}
+      <button
+        ref={btnRef}
+        onClick={() => {
+          setCount(count + 1);
+        }}
+      >
+        +1
+      </button>
+    </div>
   );
+};
+function mapStateToProps(state) {
+  return {
+    state,
+  };
 }
-
-class App extends React.Component {
-  componentDidMount() {
-    //  1、1、2、3、5、8、13、21
-    function fun(n) {
-      var num1 = 1,
-        num2 = 1,
-        num3 = 0;
-      for (var i = 0; i < n - 2; i++) {
-        num3 = num1 + num2;
-        num1 = num2;
-        num2 = num3;
-      }
-      return num3;
-    }
-    fun(1);
-  }
-  render() {
-    return <div className="App">数组</div>;
-  }
-}
-
-export default App;
+export default connect(mapStateToProps)(Counter);

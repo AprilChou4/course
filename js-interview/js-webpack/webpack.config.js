@@ -1,9 +1,27 @@
+const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = {
   entry: ['babel-polyfill', __dirname + '/app/main.js'], //已多次提及的唯一入口文件
   devtool: 'eval-source-map', //调试模式
   output: {
-    path: __dirname + '/public', //打包后的文件存放的地方
-    filename: 'bundle.js', //打包后输出文件的文件名
+    // path: __dirname + '/public', //打包后的文件存放的地方
+    // filename: 'bundle.js', //打包后输出文件的文件名
+    filename: 'script/[name].chunk.[chunkhash:5].js',
+    path: path.resolve(__dirname, './dist'),
+  },
+  optimization: {
+    splitChunks: {
+      cacheGroups: {
+        vendor: {
+          // 将第三方模块提取出来
+          test: /node_modules/,
+          chunks: 'initial',
+          name: 'common',
+          priority: 10, // 优先级
+          enforce: true,
+        },
+      },
+    },
   },
   //   本地服务器
   devServer: {
@@ -49,4 +67,9 @@ module.exports = {
       },
     ],
   },
+  plugins: [
+    new HtmlWebpackPlugin({
+      template: path.resolve(__dirname, './public/index.html'),
+    }),
+  ],
 };
